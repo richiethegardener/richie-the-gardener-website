@@ -28,6 +28,15 @@ header::after {
             rgba(36, 29, 24, 0.85) 100%);
 }
 
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+h1,
+h2 {
+    font-family: Fraunces, serif;
+}
+
 
 nav ul {
     list-style: none;
@@ -38,21 +47,36 @@ nav ul {
     gap: clamp(12px, 3vw, 40px);
 }
 
-nav a {
+nav a,
+#listen {
     text-decoration: none;
     text-transform: uppercase;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
     letter-spacing: 3px;
     color: #F1EBDF;
-    font-weight: bold;
-    padding: 8px;
+    padding: 8px 16px;
     display: inline-block;
-    transition: color 0.3s ease;
+    border-radius: 999px;
+    transition: color 0.3s ease, transform 0.3s ease, backdrop-filter 0.3s ease; border-color 0.3s ease;
 }
 
 nav a:hover,
-nav a:focus-visible {
+nav a:focus-visible,
+#listen:hover,
+#listen:focus-visible {
     color: #CDB78C;
-    backdrop-filter: blur(80px);
-    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    transform: scale(1.05);
+    outline: 1px solid #F1EBDF;
+    outline-offset: 2px;
 }
+
+#listen {
+    border: 1px solid #F1EBDF;
+}
+
+#listen:hover,
+#listen:focus-visible {
+    outline: none;
+    border-color: #CDB78C;
+}
+ 
